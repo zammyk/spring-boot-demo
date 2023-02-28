@@ -2,7 +2,6 @@ package com.rahulhembrom.springbootdemo.controller;
 
 import com.rahulhembrom.springbootdemo.entity.Department;
 import com.rahulhembrom.springbootdemo.service.DepartmentService;
-import com.rahulhembrom.springbootdemo.service.DepartmentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,5 +20,15 @@ public class DepartmentController {
     @GetMapping("/departments")
     public List<Department> fetchDepartmentList(){
         return departmentService.fetchDepartmentList();
+    }
+
+    @GetMapping("/departments/{id}")
+    public  Department fetchDepartmentById(@PathVariable("id") Long departmentId){
+        return departmentService.fetchDepartmentById(departmentId);
+    }
+    @DeleteMapping("/departments/{id}")
+    public String deleteDepartmentById(@PathVariable("id") Long departmentId){
+        departmentService.deleteDepartmentById(departmentId);
+        return "Department deleted Successfully";
     }
 }
