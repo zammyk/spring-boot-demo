@@ -24,6 +24,14 @@ public class DepartmentController {
         return departmentService.saveDepartment(department);
     }
 
+    @PostMapping("/departments/multi")
+    public List<Department> saveMultipleDepartment(@RequestBody List<Department> departmentList){
+        for(Department department: departmentList){
+            departmentService.saveDepartment(department);
+        }
+        return departmentList;
+    }
+
     @GetMapping("/departments")
     public List<Department> fetchDepartmentList(){
         LOGGER.info("Inside fetchDepartmentList of DepartmentController");
