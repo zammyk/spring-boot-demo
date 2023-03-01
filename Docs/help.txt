@@ -1,1 +1,1 @@
-jpa.query-methods.query-creation: https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation
+jpa.query-methods: https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods
