@@ -12,18 +12,21 @@ public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long departmentId;
-//    @Length(max=5,min=1)
-//    @Size
-//    @Email
-//    @Positive
-//    @Negative
-//    @PositiveOrZero
-//    @NegativeOrZero
-//    // for date fields
-//    @Future
-//    @FutureOrPresent
-//    @Past
-//    @PastOrPresent
+
+    /*
+    @Length(max=5,min=1)
+    @Size
+    @Email
+    @Positive
+    @Negative
+    @PositiveOrZero
+    @NegativeOrZero
+    // for date fields
+    @Future
+    @FutureOrPresent
+    @Past
+    @PastOrPresent
+     */
     @NotBlank(message = "Please Add Department Name")
     private String departmentName;
     private String departmentAddress;
